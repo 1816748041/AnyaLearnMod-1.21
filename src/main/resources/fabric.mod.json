@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "anyatutorial",
+	"version": "${version}",
+	"name": "AnyaTutorial",
+	"description": "这是模组描述",
+	"authors": [
+		"Anya"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/anyatutorial/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.anyawowowowo.AnyaTutorialClient"
+		],
+		"fabric-datagen": [
+			"com.anyawowowowo.AnyaTutorialDataGenerator"
+		],
+		"main": [
+			"com.anyawowowowo.AnyaTutorial"
+		]
+	},
+	"mixins": [
+		"anyatutorial.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
