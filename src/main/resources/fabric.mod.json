@@ -3,7 +3,7 @@
 	"id": "anyatutorial",
 	"version": "${version}",
 	"name": "AnyaTutorial",
-	"description": "这是模组描述",
+	"description": "这是模组描述.",
 	"authors": [
 		"Anya"
 	],
