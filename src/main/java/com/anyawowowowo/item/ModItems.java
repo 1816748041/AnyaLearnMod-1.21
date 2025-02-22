@@ -1,11 +1,12 @@
 package com.anyawowowowo.item;
 
 import com.anyawowowowo.AnyaTutorial;
-import net.minecraft.item.BlockItem;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
@@ -26,7 +27,16 @@ public class ModItems {
     //这里使用了java的特性，在AnyaTutorial里面调用此方法的时候，java就会初始化由public static final修饰的这个字段，由此来调用registerItems这个方法来注册物品
     public static void registerModItems()
     {
+        //这里添加物品到物品栏
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroups);
+
         //打印日志
         AnyaTutorial.LOGGER.info("注册了物品");
+    }
+
+    //添加物品到物品栏的方法
+    private static void addItemToItemGroups(FabricItemGroupEntries entries)
+    {
+        entries.add(Anya_Head);
     }
 }

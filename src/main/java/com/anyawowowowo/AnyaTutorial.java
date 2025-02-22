@@ -1,5 +1,6 @@
 package com.anyawowowowo;
 
+import com.anyawowowowo.item.ModItemGroups;
 import com.anyawowowowo.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,6 +17,9 @@ public class AnyaTutorial implements ModInitializer {
 	public void onInitialize() {
 		//使用java特性，初始化ModItems这个类里面的物品
 		ModItems.registerModItems();
+
+		//使用java特性，在注册物品栏位
+		ModItemGroups.registerModItemGroups();
 
 		//这里一旦minecraft加载完成mod之后就会调用，但是有些东西比如资源resources肯还没有被初始化
 		LOGGER.info("Hello Fabric world!");
